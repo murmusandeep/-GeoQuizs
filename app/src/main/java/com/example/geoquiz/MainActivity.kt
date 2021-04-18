@@ -40,15 +40,18 @@ class MainActivity : AppCompatActivity() {
 
         trueButton.setOnClickListener { view: View ->
             checkAnswer(true)
+
         }
 
         falseButton.setOnClickListener { view: View ->
             checkAnswer(false)
+
         }
 
         nextButton.setOnClickListener {
             currentIndex = (currentIndex + 1) % questionBank.size
             updateQuestion()
+
         }
 
         updateQuestion()
@@ -89,4 +92,5 @@ class MainActivity : AppCompatActivity() {
         }
         Toast.makeText(this, messageResId, Toast.LENGTH_SHORT).show()
     }
+
 }
